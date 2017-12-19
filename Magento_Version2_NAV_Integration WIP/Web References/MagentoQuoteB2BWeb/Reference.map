@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="file:///C:/Azzure/Magento/MAGENTO_Ellison Europe NEW/AzzureMagentoNAVConnector v2-02f/AzzureMagentoNAVConnector v2/Magento_Version2_NAV_Integration WIP/sizzix-b2b.c3preview wsdls/quotecart_b2b.wsdl" filename="MagentoWSDL.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

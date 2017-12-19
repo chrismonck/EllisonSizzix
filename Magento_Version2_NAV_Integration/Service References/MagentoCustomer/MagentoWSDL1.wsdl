@@ -1,0 +1,1817 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="MagentoWSDL" targetNamespace="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+      <xsd:element name="GenericFault" type="tns:GenericFault" />
+      <xsd:complexType name="GenericFaultParameter">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="key" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="value" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfGenericFaultParameter">
+        <xsd:annotation>
+          <xsd:documentation>An array of GenericFaultParameter items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:GenericFaultParameter">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfGenericFaultParameter.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="WrappedError">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="message" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="parameters" type="tns:ArrayOfGenericFaultParameter">
+            <xsd:annotation>
+              <xsd:documentation>Message parameters.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfWrappedError">
+        <xsd:annotation>
+          <xsd:documentation>An array of WrappedError items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:WrappedError">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfWrappedError.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="GenericFault">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="Trace" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Exception calls stack trace.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="Parameters" type="tns:ArrayOfGenericFaultParameter">
+            <xsd:annotation>
+              <xsd:documentation>Additional exception parameters.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="WrappedErrors" type="tns:ArrayOfWrappedError">
+            <xsd:annotation>
+              <xsd:documentation>Additional wrapped errors.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FrameworkDataImageContentInterface">
+        <xsd:annotation>
+          <xsd:documentation>Image Content data interface</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="base64EncodedData" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Media data (base64 encoded content)</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="type" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>MIME type</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="name" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Image name</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfString">
+        <xsd:annotation>
+          <xsd:documentation>An array of string items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfString.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FrameworkDataVideoContentInterface">
+        <xsd:annotation>
+          <xsd:documentation>Video Content data interface</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="mediaType" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>MIME type</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="videoProvider" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Provider</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="videoUrl" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Video URL</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="videoTitle" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Title</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="videoDescription" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Video Description</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="videoMetadata" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Metadata</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CatalogDataProductAttributeMediaGalleryEntryExtensionInterface">
+        <xsd:annotation>
+          <xsd:documentation>ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductAttributeMediaGalleryEntryInterface</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="videoContent" type="tns:FrameworkDataVideoContentInterface">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CatalogDataProductAttributeMediaGalleryEntryInterface">
+        <xsd:annotation>
+          <xsd:documentation />
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="id" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Gallery entry ID</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:min />
+                <inf:max />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="mediaType" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Media type</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="label" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Gallery entry alternative text</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="position" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Gallery entry position (sort order)</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:min />
+                <inf:max />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="disabled" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>If gallery entry is hidden from product page</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:default>false</inf:default>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="types" type="tns:ArrayOfString">
+            <xsd:annotation>
+              <xsd:documentation>Gallery entry image types (thumbnail, image, small_image etc)</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="file" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>File path</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="content" type="tns:FrameworkDataImageContentInterface">
+            <xsd:annotation>
+              <xsd:documentation>Media gallery content</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="extensionAttributes" type="tns:CatalogDataProductAttributeMediaGalleryEntryExtensionInterface">
+            <xsd:annotation>
+              <xsd:documentation>Existing extension attributes object or create a new one.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customerCustomerRepositoryV1GetByIdRequest" type="tns:CustomerCustomerRepositoryV1GetByIdRequest" />
+      <xsd:complexType name="CustomerCustomerRepositoryV1GetByIdRequest">
+        <xsd:annotation>
+          <xsd:documentation>Get customer by customer ID.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="customerId" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customerCustomerRepositoryV1GetByIdResponse" type="tns:CustomerCustomerRepositoryV1GetByIdResponse" />
+      <xsd:complexType name="CustomerDataRegionExtensionInterface">
+        <xsd:annotation>
+          <xsd:documentation>ExtensionInterface class for @see \Magento\Customer\Api\Data\RegionInterface</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerDataRegionInterface">
+        <xsd:annotation>
+          <xsd:documentation>Customer address region interface.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="regionCode" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Region code</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="region" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Region</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="regionId" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Region id</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="extensionAttributes" type="tns:CustomerDataRegionExtensionInterface">
+            <xsd:annotation>
+              <xsd:documentation>Existing extension attributes object or create a new one.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerDataAddressExtensionInterface">
+        <xsd:annotation>
+          <xsd:documentation>ExtensionInterface class for @see \Magento\Customer\Api\Data\AddressInterface</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+      </xsd:complexType>
+      <xsd:complexType name="FrameworkAttributeInterface">
+        <xsd:annotation>
+          <xsd:documentation>Interface for custom attribute value.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="attributeCode" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Attribute code</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="value" type="xsd:anyType">
+            <xsd:annotation>
+              <xsd:documentation>Attribute value</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfFrameworkAttributeInterface">
+        <xsd:annotation>
+          <xsd:documentation>An array of FrameworkAttributeInterface items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:FrameworkAttributeInterface">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfFrameworkAttributeInterface.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerDataAddressInterface">
+        <xsd:annotation>
+          <xsd:documentation>Customer address interface.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="id" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>ID</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="customerId" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Customer ID</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="region" type="tns:CustomerDataRegionInterface">
+            <xsd:annotation>
+              <xsd:documentation>Region</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="regionId" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Region ID</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="countryId" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Country code in ISO_3166-2 format</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="street" type="tns:ArrayOfString">
+            <xsd:annotation>
+              <xsd:documentation>Street</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="company" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Company</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="telephone" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Telephone number</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="fax" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Fax number</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="postcode" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Postcode</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="city" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>City name</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="firstname" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>First name</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="lastname" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Last name</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="middlename" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Middle name</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="prefix" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Prefix</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="suffix" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Suffix</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="vatId" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Vat id</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="defaultShipping" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>If this address is default shipping address.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="defaultBilling" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>If this address is default billing address</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="extensionAttributes" type="tns:CustomerDataAddressExtensionInterface">
+            <xsd:annotation>
+              <xsd:documentation>Existing extension attributes object or create a new one.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="customAttributes" type="tns:ArrayOfFrameworkAttributeInterface">
+            <xsd:annotation>
+              <xsd:documentation>Custom attributes values.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfCustomerDataAddressInterface">
+        <xsd:annotation>
+          <xsd:documentation>An array of CustomerDataAddressInterface items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:CustomerDataAddressInterface">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfCustomerDataAddressInterface.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerDataCustomerExtensionInterface">
+        <xsd:annotation>
+          <xsd:documentation>ExtensionInterface class for @see \Magento\Customer\Api\Data\CustomerInterface</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="isSubscribed" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerDataCustomerInterface">
+        <xsd:annotation>
+          <xsd:documentation>Customer interface.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="id" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Customer id</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="groupId" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Group id</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="defaultBilling" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Default billing address id</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="defaultShipping" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Default shipping address id</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="confirmation" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Confirmation</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="createdAt" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Created at time</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="updatedAt" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Updated at time</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="createdIn" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Created in area</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="dob" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Date of birth</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="email" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Email address</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="firstname" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>First name</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="lastname" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Last name</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="middlename" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Middle name</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="prefix" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Prefix</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="suffix" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Suffix</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="gender" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Gender</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="storeId" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Store id</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="taxvat" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Tax Vat</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="websiteId" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Website id</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="addresses" type="tns:ArrayOfCustomerDataAddressInterface">
+            <xsd:annotation>
+              <xsd:documentation>Customer addresses.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="disableAutoGroupChange" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Disable auto group change flag.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="extensionAttributes" type="tns:CustomerDataCustomerExtensionInterface">
+            <xsd:annotation>
+              <xsd:documentation>Existing extension attributes object or create a new one.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="customAttributes" type="tns:ArrayOfFrameworkAttributeInterface">
+            <xsd:annotation>
+              <xsd:documentation>Custom attributes values.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerCustomerRepositoryV1GetByIdResponse">
+        <xsd:annotation>
+          <xsd:documentation>Response container for the customerCustomerRepositoryV1GetById call.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="result" type="tns:CustomerDataCustomerInterface">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customerCustomerRepositoryV1SaveRequest" type="tns:CustomerCustomerRepositoryV1SaveRequest" />
+      <xsd:complexType name="CustomerCustomerRepositoryV1SaveRequest">
+        <xsd:annotation>
+          <xsd:documentation>Create or update a customer.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="customer" type="tns:CustomerDataCustomerInterface">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="passwordHash" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customerCustomerRepositoryV1SaveResponse" type="tns:CustomerCustomerRepositoryV1SaveResponse" />
+      <xsd:complexType name="CustomerCustomerRepositoryV1SaveResponse">
+        <xsd:annotation>
+          <xsd:documentation>Response container for the customerCustomerRepositoryV1Save call.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="result" type="tns:CustomerDataCustomerInterface">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customerCustomerRepositoryV1GetListRequest" type="tns:CustomerCustomerRepositoryV1GetListRequest" />
+      <xsd:complexType name="FrameworkFilter">
+        <xsd:annotation>
+          <xsd:documentation>Filter which can be used by any methods from service layer.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="field" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Field</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="value" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Value</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="conditionType" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Condition type</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfFrameworkFilter">
+        <xsd:annotation>
+          <xsd:documentation>An array of FrameworkFilter items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:FrameworkFilter">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfFrameworkFilter.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FrameworkSearchFilterGroup">
+        <xsd:annotation>
+          <xsd:documentation>Groups two or more filters together using a logical OR</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="filters" type="tns:ArrayOfFrameworkFilter">
+            <xsd:annotation>
+              <xsd:documentation>A list of filters in this group</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfFrameworkSearchFilterGroup">
+        <xsd:annotation>
+          <xsd:documentation>An array of FrameworkSearchFilterGroup items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:FrameworkSearchFilterGroup">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfFrameworkSearchFilterGroup.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FrameworkSortOrder">
+        <xsd:annotation>
+          <xsd:documentation>Data object for sort order.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="field" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Sorting field.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="direction" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Sorting direction.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfFrameworkSortOrder">
+        <xsd:annotation>
+          <xsd:documentation>An array of FrameworkSortOrder items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:FrameworkSortOrder">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfFrameworkSortOrder.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FrameworkSearchCriteriaInterface">
+        <xsd:annotation>
+          <xsd:documentation>Search criteria interface.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="filterGroups" type="tns:ArrayOfFrameworkSearchFilterGroup">
+            <xsd:annotation>
+              <xsd:documentation>A list of filter groups.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="sortOrders" type="tns:ArrayOfFrameworkSortOrder">
+            <xsd:annotation>
+              <xsd:documentation>Sort order.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="pageSize" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Page size.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="currentPage" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Current page.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerCustomerRepositoryV1GetListRequest">
+        <xsd:annotation>
+          <xsd:documentation>Retrieve customers which match a specified criteria. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See http://devdocs.magento.com/codelinks/attributes.html#CustomerRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="searchCriteria" type="tns:FrameworkSearchCriteriaInterface">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customerCustomerRepositoryV1GetListResponse" type="tns:CustomerCustomerRepositoryV1GetListResponse" />
+      <xsd:complexType name="ArrayOfCustomerDataCustomerInterface">
+        <xsd:annotation>
+          <xsd:documentation>An array of CustomerDataCustomerInterface items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:CustomerDataCustomerInterface">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfCustomerDataCustomerInterface.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerDataCustomerSearchResultsInterface">
+        <xsd:annotation>
+          <xsd:documentation>Interface for customer search results.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="items" type="tns:ArrayOfCustomerDataCustomerInterface">
+            <xsd:annotation>
+              <xsd:documentation>Customers list.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="searchCriteria" type="tns:FrameworkSearchCriteriaInterface">
+            <xsd:annotation>
+              <xsd:documentation>Search criteria.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="totalCount" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Total count.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerCustomerRepositoryV1GetListResponse">
+        <xsd:annotation>
+          <xsd:documentation>Response container for the customerCustomerRepositoryV1GetList call.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="result" type="tns:CustomerDataCustomerSearchResultsInterface">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customerCustomerRepositoryV1DeleteByIdRequest" type="tns:CustomerCustomerRepositoryV1DeleteByIdRequest" />
+      <xsd:complexType name="CustomerCustomerRepositoryV1DeleteByIdRequest">
+        <xsd:annotation>
+          <xsd:documentation>Delete customer by ID.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="customerId" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1DeleteById</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customerCustomerRepositoryV1DeleteByIdResponse" type="tns:CustomerCustomerRepositoryV1DeleteByIdResponse" />
+      <xsd:complexType name="CustomerCustomerRepositoryV1DeleteByIdResponse">
+        <xsd:annotation>
+          <xsd:documentation>Response container for the customerCustomerRepositoryV1DeleteById call.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>true on success</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1DeleteById</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customerAddressRepositoryV1GetByIdRequest" type="tns:CustomerAddressRepositoryV1GetByIdRequest" />
+      <xsd:complexType name="CustomerAddressRepositoryV1GetByIdRequest">
+        <xsd:annotation>
+          <xsd:documentation>Retrieve customer address.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="addressId" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customerAddressRepositoryV1GetByIdResponse" type="tns:CustomerAddressRepositoryV1GetByIdResponse" />
+      <xsd:complexType name="CustomerAddressRepositoryV1GetByIdResponse">
+        <xsd:annotation>
+          <xsd:documentation>Response container for the customerAddressRepositoryV1GetById call.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="result" type="tns:CustomerDataAddressInterface">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customerAddressRepositoryV1DeleteByIdRequest" type="tns:CustomerAddressRepositoryV1DeleteByIdRequest" />
+      <xsd:complexType name="CustomerAddressRepositoryV1DeleteByIdRequest">
+        <xsd:annotation>
+          <xsd:documentation>Delete customer address by ID.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="addressId" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1DeleteById</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customerAddressRepositoryV1DeleteByIdResponse" type="tns:CustomerAddressRepositoryV1DeleteByIdResponse" />
+      <xsd:complexType name="CustomerAddressRepositoryV1DeleteByIdResponse">
+        <xsd:annotation>
+          <xsd:documentation>Response container for the customerAddressRepositoryV1DeleteById call.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>true on success</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1DeleteById</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GenericFault">
+    <wsdl:part name="messageParameters" element="tns:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="customerCustomerRepositoryV1GetByIdRequest">
+    <wsdl:part name="messageParameters" element="tns:customerCustomerRepositoryV1GetByIdRequest" />
+  </wsdl:message>
+  <wsdl:message name="customerCustomerRepositoryV1GetByIdResponse">
+    <wsdl:part name="messageParameters" element="tns:customerCustomerRepositoryV1GetByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="customerCustomerRepositoryV1SaveRequest">
+    <wsdl:part name="messageParameters" element="tns:customerCustomerRepositoryV1SaveRequest" />
+  </wsdl:message>
+  <wsdl:message name="customerCustomerRepositoryV1SaveResponse">
+    <wsdl:part name="messageParameters" element="tns:customerCustomerRepositoryV1SaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="customerCustomerRepositoryV1GetListRequest">
+    <wsdl:part name="messageParameters" element="tns:customerCustomerRepositoryV1GetListRequest" />
+  </wsdl:message>
+  <wsdl:message name="customerCustomerRepositoryV1GetListResponse">
+    <wsdl:part name="messageParameters" element="tns:customerCustomerRepositoryV1GetListResponse" />
+  </wsdl:message>
+  <wsdl:message name="customerCustomerRepositoryV1DeleteByIdRequest">
+    <wsdl:part name="messageParameters" element="tns:customerCustomerRepositoryV1DeleteByIdRequest" />
+  </wsdl:message>
+  <wsdl:message name="customerCustomerRepositoryV1DeleteByIdResponse">
+    <wsdl:part name="messageParameters" element="tns:customerCustomerRepositoryV1DeleteByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="customerAddressRepositoryV1GetByIdRequest">
+    <wsdl:part name="messageParameters" element="tns:customerAddressRepositoryV1GetByIdRequest" />
+  </wsdl:message>
+  <wsdl:message name="customerAddressRepositoryV1GetByIdResponse">
+    <wsdl:part name="messageParameters" element="tns:customerAddressRepositoryV1GetByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="customerAddressRepositoryV1DeleteByIdRequest">
+    <wsdl:part name="messageParameters" element="tns:customerAddressRepositoryV1DeleteByIdRequest" />
+  </wsdl:message>
+  <wsdl:message name="customerAddressRepositoryV1DeleteByIdResponse">
+    <wsdl:part name="messageParameters" element="tns:customerAddressRepositoryV1DeleteByIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="customerCustomerRepositoryV1PortType">
+    <wsdl:operation name="customerCustomerRepositoryV1GetById">
+      <wsdl:input message="tns:customerCustomerRepositoryV1GetByIdRequest" />
+      <wsdl:output message="tns:customerCustomerRepositoryV1GetByIdResponse" />
+      <wsdl:fault name="GenericFault" message="tns:GenericFault" />
+    </wsdl:operation>
+    <wsdl:operation name="customerCustomerRepositoryV1Save">
+      <wsdl:input message="tns:customerCustomerRepositoryV1SaveRequest" />
+      <wsdl:output message="tns:customerCustomerRepositoryV1SaveResponse" />
+      <wsdl:fault name="GenericFault" message="tns:GenericFault" />
+    </wsdl:operation>
+    <wsdl:operation name="customerCustomerRepositoryV1GetList">
+      <wsdl:input message="tns:customerCustomerRepositoryV1GetListRequest" />
+      <wsdl:output message="tns:customerCustomerRepositoryV1GetListResponse" />
+      <wsdl:fault name="GenericFault" message="tns:GenericFault" />
+    </wsdl:operation>
+    <wsdl:operation name="customerCustomerRepositoryV1DeleteById">
+      <wsdl:input message="tns:customerCustomerRepositoryV1DeleteByIdRequest" />
+      <wsdl:output message="tns:customerCustomerRepositoryV1DeleteByIdResponse" />
+      <wsdl:fault name="GenericFault" message="tns:GenericFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="customerAddressRepositoryV1PortType">
+    <wsdl:operation name="customerAddressRepositoryV1GetById">
+      <wsdl:input message="tns:customerAddressRepositoryV1GetByIdRequest" />
+      <wsdl:output message="tns:customerAddressRepositoryV1GetByIdResponse" />
+      <wsdl:fault name="GenericFault" message="tns:GenericFault" />
+    </wsdl:operation>
+    <wsdl:operation name="customerAddressRepositoryV1DeleteById">
+      <wsdl:input message="tns:customerAddressRepositoryV1DeleteByIdRequest" />
+      <wsdl:output message="tns:customerAddressRepositoryV1DeleteByIdResponse" />
+      <wsdl:fault name="GenericFault" message="tns:GenericFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="customerCustomerRepositoryV1Binding" type="tns:customerCustomerRepositoryV1PortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="customerCustomerRepositoryV1GetById">
+      <soap12:operation soapAction="customerCustomerRepositoryV1GetById" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GenericFault" />
+    </wsdl:operation>
+    <wsdl:operation name="customerCustomerRepositoryV1Save">
+      <soap12:operation soapAction="customerCustomerRepositoryV1Save" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GenericFault" />
+    </wsdl:operation>
+    <wsdl:operation name="customerCustomerRepositoryV1GetList">
+      <soap12:operation soapAction="customerCustomerRepositoryV1GetList" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GenericFault" />
+    </wsdl:operation>
+    <wsdl:operation name="customerCustomerRepositoryV1DeleteById">
+      <soap12:operation soapAction="customerCustomerRepositoryV1DeleteById" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GenericFault" />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="customerAddressRepositoryV1Binding" type="tns:customerAddressRepositoryV1PortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="customerAddressRepositoryV1GetById">
+      <soap12:operation soapAction="customerAddressRepositoryV1GetById" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GenericFault" />
+    </wsdl:operation>
+    <wsdl:operation name="customerAddressRepositoryV1DeleteById">
+      <soap12:operation soapAction="customerAddressRepositoryV1DeleteById" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GenericFault" />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="customerCustomerRepositoryV1Service">
+    <wsdl:port name="customerCustomerRepositoryV1Port" binding="tns:customerCustomerRepositoryV1Binding">
+      <soap12:address location="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+    </wsdl:port>
+  </wsdl:service>
+  <wsdl:service name="customerAddressRepositoryV1Service">
+    <wsdl:port name="customerAddressRepositoryV1Port" binding="tns:customerAddressRepositoryV1Binding">
+      <soap12:address location="https://www.sizzix.co.uk/soap/b2c_uk?services=customerCustomerRepositoryV1%2CcustomerAddressRepositoryV1" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,608 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B75900FC-9EE6-43D3-AB30-8A5E072B63C8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Magento_Version2_NAV_Integration_Sizzix</RootNamespace>
+    <AssemblyName>Magento_Version2_NAV_Integration_Sizzix</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.5, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9.5\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Magento.RestApi, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Magento.RestApi.1.0.4\lib\net40\Magento.RestApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Log.cs" />
+    <Compile Include="MagentoVersion2Helper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MagentoAccountCoordinatorB2B\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MagentoAccountMessages\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MagentoAttributes\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MagentoAuthAWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MagentoAuthB2B\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MagentoAuth\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MagentoCustGroupRespository\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MagentoCustomerPriceGroups\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MagentoCustomer\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MagentoPreOrderForecasts\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MagentoPreOrderItems\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MagentoProductSR\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MagentoQuoteCart_B2B\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MagentoSales\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MagentoProductAttributesB2B\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MagentoSalesShipmentTracking\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Customer_service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Interactions_service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Interaction_Attachment_Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ItemVariant\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Item_Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MagentoQuoteB2BWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\NavMagFunctions\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SalesOrder_service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Salespersons\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SalesPrices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="C:\Azzure\Magento\MAGENTO_Ellison Europe NEW\AzzureMagentoNAVConnector v2-02f\AzzureMagentoNAVConnector v2\Magento_Version2_NAV_Integration WIP\sizzix-b2b.c3preview wsdls\quotecart_b2b.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MagentoQuoteB2BWeb\</RelPath>
+      <UpdateFromURL>C:\Azzure\Magento\MAGENTO_Ellison Europe NEW\AzzureMagentoNAVConnector v2-02f\AzzureMagentoNAVConnector v2\Magento_Version2_NAV_Integration WIP\sizzix-b2b.c3preview wsdls\quotecart_b2b.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Magento_Version2_NAV_Integration_WIP_MagentoQuoteB2BWeb_quoteCartRepositoryV1Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:9147/EllisonDev/WS/Ellison%2520Europe%2520Ltd./Codeunit/MagentoFunctions">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\NavMagFunctions\</RelPath>
+      <UpdateFromURL>http://localhost:9147/EllisonDev/WS/Ellison%2520Europe%2520Ltd./Codeunit/MagentoFunctions</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Magento_Version2_NAV_Integration_NavMagFunctions_MagentoFunctions</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:9147/EllisonDev/WS/Ellison%2520Europe%2520Ltd./Page/Customer">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Customer_service\</RelPath>
+      <UpdateFromURL>http://localhost:9147/EllisonDev/WS/Ellison%2520Europe%2520Ltd./Page/Customer</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Magento_Version2_NAV_Integration_Customer_service_Customer_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:9047/EllisonDev/WS/Ellison%2520Europe%2520Ltd./Page/Item">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Item_Service\</RelPath>
+      <UpdateFromURL>http://localhost:9047/EllisonDev/WS/Ellison%2520Europe%2520Ltd./Page/Item</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Magento_Version2_NAV_Integration_Item_Service_Item_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:9047/EllisonDev/WS/Ellison%2520Europe%2520Ltd./Page/ItemVariants">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ItemVariant\</RelPath>
+      <UpdateFromURL>http://localhost:9047/EllisonDev/WS/Ellison%2520Europe%2520Ltd./Page/ItemVariants</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Magento_Version2_NAV_Integration_ItemVariant_ItemVariants_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:9047/EllisonDev/WS/Ellison%2520Europe%2520Ltd./Page/MagInteraction">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Interactions_service\</RelPath>
+      <UpdateFromURL>http://localhost:9047/EllisonDev/WS/Ellison%2520Europe%2520Ltd./Page/MagInteraction</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Magento_Version2_NAV_Integration_Sizzix_Interactions_MagInteraction_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:9147/EllisonDev/WS/Ellison%2520Europe%2520Ltd./Page/SalesOrder">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SalesOrder_service\</RelPath>
+      <UpdateFromURL>http://localhost:9147/EllisonDev/WS/Ellison%2520Europe%2520Ltd./Page/SalesOrder</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Magento_Version2_NAV_Integration_SalesOrder_service_SalesOrder_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:9147/EllisonDev/WS/Ellison%2520Europe%2520Ltd./Page/Salespersons">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Salespersons\</RelPath>
+      <UpdateFromURL>http://localhost:9147/EllisonDev/WS/Ellison%2520Europe%2520Ltd./Page/Salespersons</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Magento_Version2_NAV_Integration_Sizzix_Salespersons_Salespersons_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:9147/EllisonDev/WS/Ellison%2520Europe%2520Ltd./Page/MagentoInteractionAttachments">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Interaction_Attachment_Service\</RelPath>
+      <UpdateFromURL>http://localhost:9147/EllisonDev/WS/Ellison%2520Europe%2520Ltd./Page/MagentoInteractionAttachments</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Magento_Version2_NAV_Integration_Sizzix_Interaction_Attachment_Service_MagentoInteractionAttachments_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:9147/EllisonDev/WS/Ellison%2520Europe%2520Ltd./Page/SalesLineDiscounts">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SalesPrices\</RelPath>
+      <UpdateFromURL>http://localhost:9147/EllisonDev/WS/Ellison%2520Europe%2520Ltd./Page/SalesLineDiscounts</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Magento_Version2_NAV_Integration_Sizzix_SalesPrices_SalesLineDiscounts_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MagentoAccountCoordinatorB2B\MagentoWSDL1.wsdl" />
+    <None Include="Service References\MagentoAccountMessages\MagentoWSDL1.wsdl" />
+    <None Include="Service References\MagentoAttributes\MagentoWSDL1.wsdl" />
+    <None Include="Service References\MagentoAuthAWS\MagentoWSDL.wsdl" />
+    <None Include="Service References\MagentoAuthB2B\MagentoWSDL1.wsdl" />
+    <None Include="Service References\MagentoAuth\MagentoWSDL.wsdl" />
+    <None Include="Service References\MagentoCustGroupRespository\MagentoWSDL.wsdl" />
+    <None Include="Service References\MagentoCustomerPriceGroups\MagentoWSDL1.wsdl" />
+    <None Include="Service References\MagentoCustomer\MagentoWSDL1.wsdl" />
+    <None Include="Service References\MagentoPreOrderForecasts\MagentoWSDL.wsdl" />
+    <None Include="Service References\MagentoPreOrderItems\MagentoWSDL1.wsdl" />
+    <None Include="Service References\MagentoProductAttributesB2B\MagentoWSDL1.wsdl" />
+    <None Include="Service References\MagentoProductSR\MagentoWSDL.wsdl" />
+    <None Include="Service References\MagentoQuoteCart_B2B\MagentoWSDL1.wsdl" />
+    <None Include="Service References\MagentoSalesShipmentTracking\MagentoWSDL.wsdl" />
+    <None Include="Service References\MagentoSales\MagentoWSDL.wsdl">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Customer_service\Customer.wsdl" />
+    <None Include="Web References\Customer_service\Customer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Customer_service\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Interactions_service\MagInteraction.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Interactions_service\MagInteraction.wsdl" />
+    <None Include="Web References\Interactions_service\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Interaction_Attachment_Service\MagentoInteractionAttachments.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Interaction_Attachment_Service\MagentoInteractionAttachments.wsdl" />
+    <None Include="Web References\Interaction_Attachment_Service\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ItemVariant\ItemVariants.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ItemVariant\ItemVariants.wsdl" />
+    <None Include="Web References\ItemVariant\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Item_Service\Item.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Item_Service\Item.wsdl" />
+    <None Include="Web References\Item_Service\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MagentoQuoteB2BWeb\MagentoWSDL.wsdl" />
+    <None Include="Web References\MagentoQuoteB2BWeb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\NavMagFunctions\MagentoFunctions.wsdl" />
+    <None Include="Web References\NavMagFunctions\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SalesOrder_service\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SalesOrder_service\SalesOrder.wsdl" />
+    <None Include="Web References\SalesOrder_service\SalesOrder1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Salespersons\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Salespersons\Salespersons.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Salespersons\Salespersons.wsdl" />
+    <None Include="Web References\SalesPrices\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SalesPrices\SalesLineDiscounts.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\MagentoAccountCoordinatorB2B\" />
+    <WCFMetadataStorage Include="Service References\MagentoAccountMessages\" />
+    <WCFMetadataStorage Include="Service References\MagentoAttributes\" />
+    <WCFMetadataStorage Include="Service References\MagentoAuthAWS\" />
+    <WCFMetadataStorage Include="Service References\MagentoAuthB2B\" />
+    <WCFMetadataStorage Include="Service References\MagentoAuth\" />
+    <WCFMetadataStorage Include="Service References\MagentoCustGroupRespository\" />
+    <WCFMetadataStorage Include="Service References\MagentoCustomerPriceGroups\" />
+    <WCFMetadataStorage Include="Service References\MagentoCustomer\" />
+    <WCFMetadataStorage Include="Service References\MagentoPreOrderForecasts\" />
+    <WCFMetadataStorage Include="Service References\MagentoPreOrderItems\" />
+    <WCFMetadataStorage Include="Service References\MagentoProductSR\" />
+    <WCFMetadataStorage Include="Service References\MagentoQuoteCart_B2B\" />
+    <WCFMetadataStorage Include="Service References\MagentoSales\" />
+    <WCFMetadataStorage Include="Service References\MagentoProductAttributesB2B\" />
+    <WCFMetadataStorage Include="Service References\MagentoSalesShipmentTracking\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoAuth\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoAuth\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoAuth\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoProductSR\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoProductSR\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoProductSR\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoSales\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoSales\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoSales\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoCustomer\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoCustomer\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoCustomer\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoAuthB2B\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoAuthB2B\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoAuthB2B\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoQuoteCart_B2B\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoQuoteCart_B2B\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoQuoteCart_B2B\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoAuthAWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoAuthAWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoAuthAWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoAttributes\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoAttributes\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoAttributes\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoPreOrderItems\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoPreOrderItems\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoPreOrderItems\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoProductAttributesB2B\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoProductAttributesB2B\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoProductAttributesB2B\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoAccountCoordinatorB2B\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoAccountCoordinatorB2B\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MagentoAccountCoordinatorB2B\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DefaultImage.jpg" />
+    <None Include="Service References\MagentoCustGroupRespository\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MagentoCustGroupRespository\configuration.svcinfo" />
+    <None Include="Service References\MagentoCustGroupRespository\configuration91.svcinfo" />
+    <None Include="Service References\MagentoPreOrderForecasts\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MagentoPreOrderForecasts\configuration.svcinfo" />
+    <None Include="Service References\MagentoPreOrderForecasts\configuration91.svcinfo" />
+    <None Include="Service References\MagentoAccountMessages\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MagentoAccountMessages\configuration.svcinfo" />
+    <None Include="Service References\MagentoAccountMessages\configuration91.svcinfo" />
+    <None Include="Service References\MagentoCustomerPriceGroups\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MagentoCustomerPriceGroups\configuration.svcinfo" />
+    <None Include="Service References\MagentoCustomerPriceGroups\configuration91.svcinfo" />
+    <None Include="Service References\MagentoSalesShipmentTracking\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MagentoSalesShipmentTracking\configuration.svcinfo" />
+    <None Include="Service References\MagentoSalesShipmentTracking\configuration91.svcinfo" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

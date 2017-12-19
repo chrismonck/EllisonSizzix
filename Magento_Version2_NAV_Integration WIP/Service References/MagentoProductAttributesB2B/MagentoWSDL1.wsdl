@@ -1,0 +1,2184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="MagentoWSDL" targetNamespace="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+      <xsd:element name="GenericFault" type="tns:GenericFault" />
+      <xsd:complexType name="GenericFaultParameter">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="key" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="value" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfGenericFaultParameter">
+        <xsd:annotation>
+          <xsd:documentation>An array of GenericFaultParameter items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:GenericFaultParameter">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfGenericFaultParameter.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="WrappedError">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="message" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="parameters" type="tns:ArrayOfGenericFaultParameter">
+            <xsd:annotation>
+              <xsd:documentation>Message parameters.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfWrappedError">
+        <xsd:annotation>
+          <xsd:documentation>An array of WrappedError items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:WrappedError">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfWrappedError.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="GenericFault">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="Trace" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Exception calls stack trace.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="Parameters" type="tns:ArrayOfGenericFaultParameter">
+            <xsd:annotation>
+              <xsd:documentation>Additional exception parameters.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="WrappedErrors" type="tns:ArrayOfWrappedError">
+            <xsd:annotation>
+              <xsd:documentation>Additional wrapped errors.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FrameworkDataImageContentInterface">
+        <xsd:annotation>
+          <xsd:documentation>Image Content data interface</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="base64EncodedData" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Media data (base64 encoded content)</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="type" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>MIME type</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="name" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Image name</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfString">
+        <xsd:annotation>
+          <xsd:documentation>An array of string items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfString.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FrameworkDataVideoContentInterface">
+        <xsd:annotation>
+          <xsd:documentation>Video Content data interface</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="mediaType" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>MIME type</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="videoProvider" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Provider</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="videoUrl" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Video URL</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="videoTitle" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Title</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="videoDescription" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Video Description</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="videoMetadata" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Metadata</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CatalogDataProductAttributeMediaGalleryEntryExtensionInterface">
+        <xsd:annotation>
+          <xsd:documentation>ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductAttributeMediaGalleryEntryInterface</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="videoContent" type="tns:FrameworkDataVideoContentInterface">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CatalogDataProductAttributeMediaGalleryEntryInterface">
+        <xsd:annotation>
+          <xsd:documentation />
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="id" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Gallery entry ID</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:min />
+                <inf:max />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="mediaType" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Media type</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="label" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Gallery entry alternative text</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="position" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Gallery entry position (sort order)</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:min />
+                <inf:max />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="disabled" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>If gallery entry is hidden from product page</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:default>false</inf:default>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="types" type="tns:ArrayOfString">
+            <xsd:annotation>
+              <xsd:documentation>Gallery entry image types (thumbnail, image, small_image etc)</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="file" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>File path</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="content" type="tns:FrameworkDataImageContentInterface">
+            <xsd:annotation>
+              <xsd:documentation>Media gallery content</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="extensionAttributes" type="tns:CatalogDataProductAttributeMediaGalleryEntryExtensionInterface">
+            <xsd:annotation>
+              <xsd:documentation>Existing extension attributes object or create a new one.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="catalogProductAttributeOptionManagementV1GetItemsRequest" type="tns:CatalogProductAttributeOptionManagementV1GetItemsRequest" />
+      <xsd:complexType name="CatalogProductAttributeOptionManagementV1GetItemsRequest">
+        <xsd:annotation>
+          <xsd:documentation>Retrieve list of attribute options</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="attributeCode" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeOptionManagementV1GetItems</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="catalogProductAttributeOptionManagementV1GetItemsResponse" type="tns:CatalogProductAttributeOptionManagementV1GetItemsResponse" />
+      <xsd:complexType name="EavDataAttributeOptionLabelInterface">
+        <xsd:annotation>
+          <xsd:documentation>Interface AttributeOptionLabelInterface</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="storeId" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Store id</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeOptionManagementV1Add</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="label" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Option label</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeOptionManagementV1Add</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfEavDataAttributeOptionLabelInterface">
+        <xsd:annotation>
+          <xsd:documentation>An array of EavDataAttributeOptionLabelInterface items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:EavDataAttributeOptionLabelInterface">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfEavDataAttributeOptionLabelInterface.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeOptionManagementV1Add</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="EavDataAttributeOptionInterface">
+        <xsd:annotation>
+          <xsd:documentation>Created from:</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="label" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Option label</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeOptionManagementV1Add</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="value" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Option value</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeOptionManagementV1Add</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="sortOrder" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Option order</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeOptionManagementV1Add</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="isDefault" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>Default</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeOptionManagementV1Add</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="storeLabels" type="tns:ArrayOfEavDataAttributeOptionLabelInterface">
+            <xsd:annotation>
+              <xsd:documentation>Option label for store scopes</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeOptionManagementV1Add</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfEavDataAttributeOptionInterface">
+        <xsd:annotation>
+          <xsd:documentation>An array of EavDataAttributeOptionInterface items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:EavDataAttributeOptionInterface">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfEavDataAttributeOptionInterface.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeOptionManagementV1GetItems</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CatalogProductAttributeOptionManagementV1GetItemsResponse">
+        <xsd:annotation>
+          <xsd:documentation>Response container for the catalogProductAttributeOptionManagementV1GetItems call.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="result" type="tns:ArrayOfEavDataAttributeOptionInterface">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeOptionManagementV1GetItems</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="catalogProductAttributeOptionManagementV1AddRequest" type="tns:CatalogProductAttributeOptionManagementV1AddRequest" />
+      <xsd:complexType name="CatalogProductAttributeOptionManagementV1AddRequest">
+        <xsd:annotation>
+          <xsd:documentation>Add option to attribute</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="attributeCode" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeOptionManagementV1Add</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="option" type="tns:EavDataAttributeOptionInterface">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeOptionManagementV1Add</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="catalogProductAttributeOptionManagementV1AddResponse" type="tns:CatalogProductAttributeOptionManagementV1AddResponse" />
+      <xsd:complexType name="CatalogProductAttributeOptionManagementV1AddResponse">
+        <xsd:annotation>
+          <xsd:documentation>Response container for the catalogProductAttributeOptionManagementV1Add call.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeOptionManagementV1Add</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="catalogProductAttributeOptionManagementV1DeleteRequest" type="tns:CatalogProductAttributeOptionManagementV1DeleteRequest" />
+      <xsd:complexType name="CatalogProductAttributeOptionManagementV1DeleteRequest">
+        <xsd:annotation>
+          <xsd:documentation>Delete option from attribute</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="attributeCode" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeOptionManagementV1Delete</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="optionId" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeOptionManagementV1Delete</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="catalogProductAttributeOptionManagementV1DeleteResponse" type="tns:CatalogProductAttributeOptionManagementV1DeleteResponse" />
+      <xsd:complexType name="CatalogProductAttributeOptionManagementV1DeleteResponse">
+        <xsd:annotation>
+          <xsd:documentation>Response container for the catalogProductAttributeOptionManagementV1Delete call.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeOptionManagementV1Delete</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="sizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1GetItemsRequest" type="tns:SizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1GetItemsRequest" />
+      <xsd:complexType name="SizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1GetItemsRequest">
+        <xsd:annotation>
+          <xsd:documentation>Retrieve list of attribute options</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="attributeCode" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>sizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1GetItems</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="sizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1GetItemsResponse" type="tns:SizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1GetItemsResponse" />
+      <xsd:complexType name="SizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1GetItemsResponse">
+        <xsd:annotation>
+          <xsd:documentation>Response container for the sizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1GetItems call.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="result" type="tns:ArrayOfEavDataAttributeOptionInterface">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>sizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1GetItems</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="catalogCategoryAttributeOptionManagementV1GetItemsRequest" type="tns:CatalogCategoryAttributeOptionManagementV1GetItemsRequest" />
+      <xsd:complexType name="CatalogCategoryAttributeOptionManagementV1GetItemsRequest">
+        <xsd:annotation>
+          <xsd:documentation>Retrieve list of attribute options</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="attributeCode" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogCategoryAttributeOptionManagementV1GetItems</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="catalogCategoryAttributeOptionManagementV1GetItemsResponse" type="tns:CatalogCategoryAttributeOptionManagementV1GetItemsResponse" />
+      <xsd:complexType name="CatalogCategoryAttributeOptionManagementV1GetItemsResponse">
+        <xsd:annotation>
+          <xsd:documentation>Response container for the catalogCategoryAttributeOptionManagementV1GetItems call.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="result" type="tns:ArrayOfEavDataAttributeOptionInterface">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>catalogCategoryAttributeOptionManagementV1GetItems</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="catalogProductAttributeRepositoryV1GetRequest" type="tns:CatalogProductAttributeRepositoryV1GetRequest" />
+      <xsd:complexType name="CatalogProductAttributeRepositoryV1GetRequest">
+        <xsd:annotation>
+          <xsd:documentation>Retrieve specific attribute</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="attributeCode" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="catalogProductAttributeRepositoryV1GetResponse" type="tns:CatalogProductAttributeRepositoryV1GetResponse" />
+      <xsd:complexType name="CatalogDataEavAttributeExtensionInterface">
+        <xsd:annotation>
+          <xsd:documentation>ExtensionInterface class for @see \Magento\Catalog\Api\Data\EavAttributeInterface</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+      </xsd:complexType>
+      <xsd:complexType name="EavDataAttributeFrontendLabelInterface">
+        <xsd:annotation>
+          <xsd:documentation>Interface AttributeFrontendLabelInterface</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="storeId" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Store id</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="label" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Option label</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfEavDataAttributeFrontendLabelInterface">
+        <xsd:annotation>
+          <xsd:documentation>An array of EavDataAttributeFrontendLabelInterface items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:EavDataAttributeFrontendLabelInterface">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfEavDataAttributeFrontendLabelInterface.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="EavDataAttributeValidationRuleInterface">
+        <xsd:annotation>
+          <xsd:documentation>Interface AttributeValidationRuleInterface</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="key" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Object key</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="value" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Object value</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfEavDataAttributeValidationRuleInterface">
+        <xsd:annotation>
+          <xsd:documentation>An array of EavDataAttributeValidationRuleInterface items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:EavDataAttributeValidationRuleInterface">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfEavDataAttributeValidationRuleInterface.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FrameworkAttributeInterface">
+        <xsd:annotation>
+          <xsd:documentation>Interface for custom attribute value.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="attributeCode" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Attribute code</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="value" type="xsd:anyType">
+            <xsd:annotation>
+              <xsd:documentation>Attribute value</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfFrameworkAttributeInterface">
+        <xsd:annotation>
+          <xsd:documentation>An array of FrameworkAttributeInterface items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:FrameworkAttributeInterface">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfFrameworkAttributeInterface.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CatalogDataProductAttributeInterface">
+        <xsd:annotation>
+          <xsd:documentation />
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="isWysiwygEnabled" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>WYSIWYG flag</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="isHtmlAllowedOnFront" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>The HTML tags are allowed on the frontend</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="usedForSortBy" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>It is used for sorting in product listing</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="isFilterable" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>It used in layered navigation</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="isFilterableInSearch" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>It is used in search results layered navigation</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="isUsedInGrid" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>It is used in catalog product grid</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="isVisibleInGrid" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>It is visible in catalog product grid</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="isFilterableInGrid" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>It is filterable in catalog product grid</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="position" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Position</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="applyTo" type="tns:ArrayOfString">
+            <xsd:annotation>
+              <xsd:documentation>Apply to value for the element</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="isSearchable" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>The attribute can be used in Quick Search</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="isVisibleInAdvancedSearch" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>The attribute can be used in Advanced Search</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="isComparable" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>The attribute can be compared on the frontend</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="isUsedForPromoRules" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>The attribute can be used for promo rules</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="isVisibleOnFront" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>The attribute is visible on the frontend</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="usedInProductListing" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>The attribute can be used in product listing</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="isVisible" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>Attribute is visible on frontend.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="scope" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Attribute scope</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="extensionAttributes" type="tns:CatalogDataEavAttributeExtensionInterface">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="attributeId" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Id of the attribute.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="attributeCode" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Code of the attribute.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="frontendInput" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>HTML for input element.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="entityTypeId" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Entity type id</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="isRequired" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>Attribute is required.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="options" type="tns:ArrayOfEavDataAttributeOptionInterface">
+            <xsd:annotation>
+              <xsd:documentation>Options of the attribute (key =&gt; value pairs for select)</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="isUserDefined" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>Current attribute has been defined by a user.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="defaultFrontendLabel" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Frontend label for default store</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="frontendLabels" type="tns:ArrayOfEavDataAttributeFrontendLabelInterface">
+            <xsd:annotation>
+              <xsd:documentation>Frontend label for each store</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="note" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>The note attribute for the element.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="backendType" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Backend type.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="backendModel" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Backend model</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="sourceModel" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Source model</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="defaultValue" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Default value for the element.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="isUnique" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is a unique attribute</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="frontendClass" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Frontend class of attribute</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="validationRules" type="tns:ArrayOfEavDataAttributeValidationRuleInterface">
+            <xsd:annotation>
+              <xsd:documentation>Validation rules.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="customAttributes" type="tns:ArrayOfFrameworkAttributeInterface">
+            <xsd:annotation>
+              <xsd:documentation>Custom attributes values.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CatalogProductAttributeRepositoryV1GetResponse">
+        <xsd:annotation>
+          <xsd:documentation>Response container for the catalogProductAttributeRepositoryV1Get call.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="result" type="tns:CatalogDataProductAttributeInterface">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Get</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="catalogProductAttributeRepositoryV1GetListRequest" type="tns:CatalogProductAttributeRepositoryV1GetListRequest" />
+      <xsd:complexType name="FrameworkFilter">
+        <xsd:annotation>
+          <xsd:documentation>Filter which can be used by any methods from service layer.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="field" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Field</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="value" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Value</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="conditionType" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Condition type</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfFrameworkFilter">
+        <xsd:annotation>
+          <xsd:documentation>An array of FrameworkFilter items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:FrameworkFilter">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfFrameworkFilter.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FrameworkSearchFilterGroup">
+        <xsd:annotation>
+          <xsd:documentation>Groups two or more filters together using a logical OR</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="filters" type="tns:ArrayOfFrameworkFilter">
+            <xsd:annotation>
+              <xsd:documentation>A list of filters in this group</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfFrameworkSearchFilterGroup">
+        <xsd:annotation>
+          <xsd:documentation>An array of FrameworkSearchFilterGroup items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:FrameworkSearchFilterGroup">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfFrameworkSearchFilterGroup.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FrameworkSortOrder">
+        <xsd:annotation>
+          <xsd:documentation>Data object for sort order.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="field" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Sorting field.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="direction" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Sorting direction.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfFrameworkSortOrder">
+        <xsd:annotation>
+          <xsd:documentation>An array of FrameworkSortOrder items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:FrameworkSortOrder">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfFrameworkSortOrder.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FrameworkSearchCriteriaInterface">
+        <xsd:annotation>
+          <xsd:documentation>Search criteria interface.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="filterGroups" type="tns:ArrayOfFrameworkSearchFilterGroup">
+            <xsd:annotation>
+              <xsd:documentation>A list of filter groups.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="sortOrders" type="tns:ArrayOfFrameworkSortOrder">
+            <xsd:annotation>
+              <xsd:documentation>Sort order.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="pageSize" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Page size.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="1" name="currentPage" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Current page.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CatalogProductAttributeRepositoryV1GetListRequest">
+        <xsd:annotation>
+          <xsd:documentation>Retrieve all attributes for entity type</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="searchCriteria" type="tns:FrameworkSearchCriteriaInterface">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="catalogProductAttributeRepositoryV1GetListResponse" type="tns:CatalogProductAttributeRepositoryV1GetListResponse" />
+      <xsd:complexType name="ArrayOfCatalogDataProductAttributeInterface">
+        <xsd:annotation>
+          <xsd:documentation>An array of CatalogDataProductAttributeInterface items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:CatalogDataProductAttributeInterface">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfCatalogDataProductAttributeInterface.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1GetList</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CatalogDataProductAttributeSearchResultsInterface">
+        <xsd:annotation>
+          <xsd:documentation />
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="items" type="tns:ArrayOfCatalogDataProductAttributeInterface">
+            <xsd:annotation>
+              <xsd:documentation>Attributes list.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1GetList</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="searchCriteria" type="tns:FrameworkSearchCriteriaInterface">
+            <xsd:annotation>
+              <xsd:documentation>Search criteria.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1GetList</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="1" maxOccurs="1" name="totalCount" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Total count.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:min />
+                <inf:max />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1GetList</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CatalogProductAttributeRepositoryV1GetListResponse">
+        <xsd:annotation>
+          <xsd:documentation>Response container for the catalogProductAttributeRepositoryV1GetList call.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="result" type="tns:CatalogDataProductAttributeSearchResultsInterface">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1GetList</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="catalogProductAttributeRepositoryV1SaveRequest" type="tns:CatalogProductAttributeRepositoryV1SaveRequest" />
+      <xsd:complexType name="CatalogProductAttributeRepositoryV1SaveRequest">
+        <xsd:annotation>
+          <xsd:documentation>Save attribute data</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="attribute" type="tns:CatalogDataProductAttributeInterface">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="catalogProductAttributeRepositoryV1SaveResponse" type="tns:CatalogProductAttributeRepositoryV1SaveResponse" />
+      <xsd:complexType name="CatalogProductAttributeRepositoryV1SaveResponse">
+        <xsd:annotation>
+          <xsd:documentation>Response container for the catalogProductAttributeRepositoryV1Save call.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="result" type="tns:CatalogDataProductAttributeInterface">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1Save</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="catalogProductAttributeRepositoryV1DeleteByIdRequest" type="tns:CatalogProductAttributeRepositoryV1DeleteByIdRequest" />
+      <xsd:complexType name="CatalogProductAttributeRepositoryV1DeleteByIdRequest">
+        <xsd:annotation>
+          <xsd:documentation>Delete Attribute by id</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="attributeCode" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:maxLength />
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1DeleteById</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="catalogProductAttributeRepositoryV1DeleteByIdResponse" type="tns:CatalogProductAttributeRepositoryV1DeleteByIdResponse" />
+      <xsd:complexType name="CatalogProductAttributeRepositoryV1DeleteByIdResponse">
+        <xsd:annotation>
+          <xsd:documentation>Response container for the catalogProductAttributeRepositoryV1DeleteById call.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation />
+              <xsd:appinfo xmlns:inf="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>catalogProductAttributeRepositoryV1DeleteById</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GenericFault">
+    <wsdl:part name="messageParameters" element="tns:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="catalogProductAttributeOptionManagementV1GetItemsRequest">
+    <wsdl:part name="messageParameters" element="tns:catalogProductAttributeOptionManagementV1GetItemsRequest" />
+  </wsdl:message>
+  <wsdl:message name="catalogProductAttributeOptionManagementV1GetItemsResponse">
+    <wsdl:part name="messageParameters" element="tns:catalogProductAttributeOptionManagementV1GetItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="catalogProductAttributeOptionManagementV1AddRequest">
+    <wsdl:part name="messageParameters" element="tns:catalogProductAttributeOptionManagementV1AddRequest" />
+  </wsdl:message>
+  <wsdl:message name="catalogProductAttributeOptionManagementV1AddResponse">
+    <wsdl:part name="messageParameters" element="tns:catalogProductAttributeOptionManagementV1AddResponse" />
+  </wsdl:message>
+  <wsdl:message name="catalogProductAttributeOptionManagementV1DeleteRequest">
+    <wsdl:part name="messageParameters" element="tns:catalogProductAttributeOptionManagementV1DeleteRequest" />
+  </wsdl:message>
+  <wsdl:message name="catalogProductAttributeOptionManagementV1DeleteResponse">
+    <wsdl:part name="messageParameters" element="tns:catalogProductAttributeOptionManagementV1DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="sizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1GetItemsRequest">
+    <wsdl:part name="messageParameters" element="tns:sizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1GetItemsRequest" />
+  </wsdl:message>
+  <wsdl:message name="sizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1GetItemsResponse">
+    <wsdl:part name="messageParameters" element="tns:sizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1GetItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="catalogCategoryAttributeOptionManagementV1GetItemsRequest">
+    <wsdl:part name="messageParameters" element="tns:catalogCategoryAttributeOptionManagementV1GetItemsRequest" />
+  </wsdl:message>
+  <wsdl:message name="catalogCategoryAttributeOptionManagementV1GetItemsResponse">
+    <wsdl:part name="messageParameters" element="tns:catalogCategoryAttributeOptionManagementV1GetItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="catalogProductAttributeRepositoryV1GetRequest">
+    <wsdl:part name="messageParameters" element="tns:catalogProductAttributeRepositoryV1GetRequest" />
+  </wsdl:message>
+  <wsdl:message name="catalogProductAttributeRepositoryV1GetResponse">
+    <wsdl:part name="messageParameters" element="tns:catalogProductAttributeRepositoryV1GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="catalogProductAttributeRepositoryV1GetListRequest">
+    <wsdl:part name="messageParameters" element="tns:catalogProductAttributeRepositoryV1GetListRequest" />
+  </wsdl:message>
+  <wsdl:message name="catalogProductAttributeRepositoryV1GetListResponse">
+    <wsdl:part name="messageParameters" element="tns:catalogProductAttributeRepositoryV1GetListResponse" />
+  </wsdl:message>
+  <wsdl:message name="catalogProductAttributeRepositoryV1SaveRequest">
+    <wsdl:part name="messageParameters" element="tns:catalogProductAttributeRepositoryV1SaveRequest" />
+  </wsdl:message>
+  <wsdl:message name="catalogProductAttributeRepositoryV1SaveResponse">
+    <wsdl:part name="messageParameters" element="tns:catalogProductAttributeRepositoryV1SaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="catalogProductAttributeRepositoryV1DeleteByIdRequest">
+    <wsdl:part name="messageParameters" element="tns:catalogProductAttributeRepositoryV1DeleteByIdRequest" />
+  </wsdl:message>
+  <wsdl:message name="catalogProductAttributeRepositoryV1DeleteByIdResponse">
+    <wsdl:part name="messageParameters" element="tns:catalogProductAttributeRepositoryV1DeleteByIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="catalogProductAttributeOptionManagementV1PortType">
+    <wsdl:operation name="catalogProductAttributeOptionManagementV1GetItems">
+      <wsdl:input message="tns:catalogProductAttributeOptionManagementV1GetItemsRequest" />
+      <wsdl:output message="tns:catalogProductAttributeOptionManagementV1GetItemsResponse" />
+      <wsdl:fault name="GenericFault" message="tns:GenericFault" />
+    </wsdl:operation>
+    <wsdl:operation name="catalogProductAttributeOptionManagementV1Add">
+      <wsdl:input message="tns:catalogProductAttributeOptionManagementV1AddRequest" />
+      <wsdl:output message="tns:catalogProductAttributeOptionManagementV1AddResponse" />
+      <wsdl:fault name="GenericFault" message="tns:GenericFault" />
+    </wsdl:operation>
+    <wsdl:operation name="catalogProductAttributeOptionManagementV1Delete">
+      <wsdl:input message="tns:catalogProductAttributeOptionManagementV1DeleteRequest" />
+      <wsdl:output message="tns:catalogProductAttributeOptionManagementV1DeleteResponse" />
+      <wsdl:fault name="GenericFault" message="tns:GenericFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="sizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1PortType">
+    <wsdl:operation name="sizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1GetItems">
+      <wsdl:input message="tns:sizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1GetItemsRequest" />
+      <wsdl:output message="tns:sizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1GetItemsResponse" />
+      <wsdl:fault name="GenericFault" message="tns:GenericFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="catalogCategoryAttributeOptionManagementV1PortType">
+    <wsdl:operation name="catalogCategoryAttributeOptionManagementV1GetItems">
+      <wsdl:input message="tns:catalogCategoryAttributeOptionManagementV1GetItemsRequest" />
+      <wsdl:output message="tns:catalogCategoryAttributeOptionManagementV1GetItemsResponse" />
+      <wsdl:fault name="GenericFault" message="tns:GenericFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="catalogProductAttributeRepositoryV1PortType">
+    <wsdl:operation name="catalogProductAttributeRepositoryV1Get">
+      <wsdl:input message="tns:catalogProductAttributeRepositoryV1GetRequest" />
+      <wsdl:output message="tns:catalogProductAttributeRepositoryV1GetResponse" />
+      <wsdl:fault name="GenericFault" message="tns:GenericFault" />
+    </wsdl:operation>
+    <wsdl:operation name="catalogProductAttributeRepositoryV1GetList">
+      <wsdl:input message="tns:catalogProductAttributeRepositoryV1GetListRequest" />
+      <wsdl:output message="tns:catalogProductAttributeRepositoryV1GetListResponse" />
+      <wsdl:fault name="GenericFault" message="tns:GenericFault" />
+    </wsdl:operation>
+    <wsdl:operation name="catalogProductAttributeRepositoryV1Save">
+      <wsdl:input message="tns:catalogProductAttributeRepositoryV1SaveRequest" />
+      <wsdl:output message="tns:catalogProductAttributeRepositoryV1SaveResponse" />
+      <wsdl:fault name="GenericFault" message="tns:GenericFault" />
+    </wsdl:operation>
+    <wsdl:operation name="catalogProductAttributeRepositoryV1DeleteById">
+      <wsdl:input message="tns:catalogProductAttributeRepositoryV1DeleteByIdRequest" />
+      <wsdl:output message="tns:catalogProductAttributeRepositoryV1DeleteByIdResponse" />
+      <wsdl:fault name="GenericFault" message="tns:GenericFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="catalogProductAttributeOptionManagementV1Binding" type="tns:catalogProductAttributeOptionManagementV1PortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="catalogProductAttributeOptionManagementV1GetItems">
+      <soap12:operation soapAction="catalogProductAttributeOptionManagementV1GetItems" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GenericFault" />
+    </wsdl:operation>
+    <wsdl:operation name="catalogProductAttributeOptionManagementV1Add">
+      <soap12:operation soapAction="catalogProductAttributeOptionManagementV1Add" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GenericFault" />
+    </wsdl:operation>
+    <wsdl:operation name="catalogProductAttributeOptionManagementV1Delete">
+      <soap12:operation soapAction="catalogProductAttributeOptionManagementV1Delete" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GenericFault" />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="sizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1Binding" type="tns:sizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1PortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="sizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1GetItems">
+      <soap12:operation soapAction="sizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1GetItems" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GenericFault" />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="catalogCategoryAttributeOptionManagementV1Binding" type="tns:catalogCategoryAttributeOptionManagementV1PortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="catalogCategoryAttributeOptionManagementV1GetItems">
+      <soap12:operation soapAction="catalogCategoryAttributeOptionManagementV1GetItems" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GenericFault" />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="catalogProductAttributeRepositoryV1Binding" type="tns:catalogProductAttributeRepositoryV1PortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="catalogProductAttributeRepositoryV1Get">
+      <soap12:operation soapAction="catalogProductAttributeRepositoryV1Get" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GenericFault" />
+    </wsdl:operation>
+    <wsdl:operation name="catalogProductAttributeRepositoryV1GetList">
+      <soap12:operation soapAction="catalogProductAttributeRepositoryV1GetList" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GenericFault" />
+    </wsdl:operation>
+    <wsdl:operation name="catalogProductAttributeRepositoryV1Save">
+      <soap12:operation soapAction="catalogProductAttributeRepositoryV1Save" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GenericFault" />
+    </wsdl:operation>
+    <wsdl:operation name="catalogProductAttributeRepositoryV1DeleteById">
+      <soap12:operation soapAction="catalogProductAttributeRepositoryV1DeleteById" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GenericFault" />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="catalogProductAttributeOptionManagementV1Service">
+    <wsdl:port name="catalogProductAttributeOptionManagementV1Port" binding="tns:catalogProductAttributeOptionManagementV1Binding">
+      <soap12:address location="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+    </wsdl:port>
+  </wsdl:service>
+  <wsdl:service name="sizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1Service">
+    <wsdl:port name="sizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1Port" binding="tns:sizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1Binding">
+      <soap12:address location="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+    </wsdl:port>
+  </wsdl:service>
+  <wsdl:service name="catalogCategoryAttributeOptionManagementV1Service">
+    <wsdl:port name="catalogCategoryAttributeOptionManagementV1Port" binding="tns:catalogCategoryAttributeOptionManagementV1Binding">
+      <soap12:address location="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+    </wsdl:port>
+  </wsdl:service>
+  <wsdl:service name="catalogProductAttributeRepositoryV1Service">
+    <wsdl:port name="catalogProductAttributeRepositoryV1Port" binding="tns:catalogProductAttributeRepositoryV1Binding">
+      <soap12:address location="https://sizzix-b2b.c3preview.co.uk/soap/all?services=catalogProductAttributeOptionManagementV1%2CsizzixB2bCustomerAttributeOptionsApiCustomerAttributeOptionManagementV1%2CcatalogCategoryAttributeOptionManagementV1%2CcatalogProductAttributeRepositoryV1" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

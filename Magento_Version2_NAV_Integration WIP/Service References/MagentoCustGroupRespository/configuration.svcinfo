@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configurationSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:xml-wcfconfigurationsnapshot">
+  <behaviors />
+  <bindings>
+    <binding digest="System.ServiceModel.Configuration.CustomBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089:&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data name=&quot;customerGroupRepositoryV1Binding&quot;&gt;&lt;httpsTransport /&gt;&lt;textMessageEncoding messageVersion=&quot;Soap12&quot; /&gt;&lt;/Data&gt;" bindingType="customBinding" name="customerGroupRepositoryV1Binding" />
+  </bindings>
+  <endpoints>
+    <endpoint normalizedDigest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;https://sizzix-b2b.c3preview.co.uk/soap/all?services=customerGroupRepositoryV1&quot; binding=&quot;customBinding&quot; bindingConfiguration=&quot;customerGroupRepositoryV1Binding&quot; contract=&quot;MagentoCustGroupRespository.customerGroupRepositoryV1PortType&quot; name=&quot;customerGroupRepositoryV1Port&quot; /&gt;" digest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;https://sizzix-b2b.c3preview.co.uk/soap/all?services=customerGroupRepositoryV1&quot; binding=&quot;customBinding&quot; bindingConfiguration=&quot;customerGroupRepositoryV1Binding&quot; contract=&quot;MagentoCustGroupRespository.customerGroupRepositoryV1PortType&quot; name=&quot;customerGroupRepositoryV1Port&quot; /&gt;" contractName="MagentoCustGroupRespository.customerGroupRepositoryV1PortType" name="customerGroupRepositoryV1Port" />
+  </endpoints>
+</configurationSnapshot>

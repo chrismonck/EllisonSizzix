@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/MagentoFunctions" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/MagentoFunctions" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/MagentoFunctions" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="GetCustomerIdByEcomID">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="eID" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetCustomerIdByEcomID_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CheckIfItemExists">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="itemNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="ecommID" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="itemDescrip" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="bAssemblyToOrder" type="boolean" />
+            <element minOccurs="1" maxOccurs="1" name="variantID" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CheckIfItemExists_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="DownloadOrders">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="DownloadOrders_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="UploadCustomers">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="UploadCustomers_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="UploadItems">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="UploadItems_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="ResyncProdIDs">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="ResyncProdIDs_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="GetSessionID">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="GetSessionID_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="SetAssemblyComponent">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="assemblyOrderNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="itemNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="qty" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="descrip" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="ecommerceID" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="variantID" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SetAssemblyComponent_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetAssemblyOrderNo">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="salesOrderNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="salesLineNo" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetAssemblyOrderNo_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UploadInventoryLevels">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="UploadInventoryLevels_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="DeleteBlankLines">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="salesOrderNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="DeleteBlankLines_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="GetCustomerIdByEcomID">
+    <part name="parameters" element="tns:GetCustomerIdByEcomID" />
+  </message>
+  <message name="GetCustomerIdByEcomID_Result">
+    <part name="parameters" element="tns:GetCustomerIdByEcomID_Result" />
+  </message>
+  <message name="CheckIfItemExists">
+    <part name="parameters" element="tns:CheckIfItemExists" />
+  </message>
+  <message name="CheckIfItemExists_Result">
+    <part name="parameters" element="tns:CheckIfItemExists_Result" />
+  </message>
+  <message name="DownloadOrders">
+    <part name="parameters" element="tns:DownloadOrders" />
+  </message>
+  <message name="DownloadOrders_Result">
+    <part name="parameters" element="tns:DownloadOrders_Result" />
+  </message>
+  <message name="UploadCustomers">
+    <part name="parameters" element="tns:UploadCustomers" />
+  </message>
+  <message name="UploadCustomers_Result">
+    <part name="parameters" element="tns:UploadCustomers_Result" />
+  </message>
+  <message name="UploadItems">
+    <part name="parameters" element="tns:UploadItems" />
+  </message>
+  <message name="UploadItems_Result">
+    <part name="parameters" element="tns:UploadItems_Result" />
+  </message>
+  <message name="ResyncProdIDs">
+    <part name="parameters" element="tns:ResyncProdIDs" />
+  </message>
+  <message name="ResyncProdIDs_Result">
+    <part name="parameters" element="tns:ResyncProdIDs_Result" />
+  </message>
+  <message name="GetSessionID">
+    <part name="parameters" element="tns:GetSessionID" />
+  </message>
+  <message name="GetSessionID_Result">
+    <part name="parameters" element="tns:GetSessionID_Result" />
+  </message>
+  <message name="SetAssemblyComponent">
+    <part name="parameters" element="tns:SetAssemblyComponent" />
+  </message>
+  <message name="SetAssemblyComponent_Result">
+    <part name="parameters" element="tns:SetAssemblyComponent_Result" />
+  </message>
+  <message name="GetAssemblyOrderNo">
+    <part name="parameters" element="tns:GetAssemblyOrderNo" />
+  </message>
+  <message name="GetAssemblyOrderNo_Result">
+    <part name="parameters" element="tns:GetAssemblyOrderNo_Result" />
+  </message>
+  <message name="UploadInventoryLevels">
+    <part name="parameters" element="tns:UploadInventoryLevels" />
+  </message>
+  <message name="UploadInventoryLevels_Result">
+    <part name="parameters" element="tns:UploadInventoryLevels_Result" />
+  </message>
+  <message name="DeleteBlankLines">
+    <part name="parameters" element="tns:DeleteBlankLines" />
+  </message>
+  <message name="DeleteBlankLines_Result">
+    <part name="parameters" element="tns:DeleteBlankLines_Result" />
+  </message>
+  <portType name="MagentoFunctions_Port">
+    <operation name="GetCustomerIdByEcomID">
+      <input name="GetCustomerIdByEcomID" message="tns:GetCustomerIdByEcomID" />
+      <output name="GetCustomerIdByEcomID_Result" message="tns:GetCustomerIdByEcomID_Result" />
+    </operation>
+    <operation name="CheckIfItemExists">
+      <input name="CheckIfItemExists" message="tns:CheckIfItemExists" />
+      <output name="CheckIfItemExists_Result" message="tns:CheckIfItemExists_Result" />
+    </operation>
+    <operation name="DownloadOrders">
+      <input name="DownloadOrders" message="tns:DownloadOrders" />
+      <output name="DownloadOrders_Result" message="tns:DownloadOrders_Result" />
+    </operation>
+    <operation name="UploadCustomers">
+      <input name="UploadCustomers" message="tns:UploadCustomers" />
+      <output name="UploadCustomers_Result" message="tns:UploadCustomers_Result" />
+    </operation>
+    <operation name="UploadItems">
+      <input name="UploadItems" message="tns:UploadItems" />
+      <output name="UploadItems_Result" message="tns:UploadItems_Result" />
+    </operation>
+    <operation name="ResyncProdIDs">
+      <input name="ResyncProdIDs" message="tns:ResyncProdIDs" />
+      <output name="ResyncProdIDs_Result" message="tns:ResyncProdIDs_Result" />
+    </operation>
+    <operation name="GetSessionID">
+      <input name="GetSessionID" message="tns:GetSessionID" />
+      <output name="GetSessionID_Result" message="tns:GetSessionID_Result" />
+    </operation>
+    <operation name="SetAssemblyComponent">
+      <input name="SetAssemblyComponent" message="tns:SetAssemblyComponent" />
+      <output name="SetAssemblyComponent_Result" message="tns:SetAssemblyComponent_Result" />
+    </operation>
+    <operation name="GetAssemblyOrderNo">
+      <input name="GetAssemblyOrderNo" message="tns:GetAssemblyOrderNo" />
+      <output name="GetAssemblyOrderNo_Result" message="tns:GetAssemblyOrderNo_Result" />
+    </operation>
+    <operation name="UploadInventoryLevels">
+      <input name="UploadInventoryLevels" message="tns:UploadInventoryLevels" />
+      <output name="UploadInventoryLevels_Result" message="tns:UploadInventoryLevels_Result" />
+    </operation>
+    <operation name="DeleteBlankLines">
+      <input name="DeleteBlankLines" message="tns:DeleteBlankLines" />
+      <output name="DeleteBlankLines_Result" message="tns:DeleteBlankLines_Result" />
+    </operation>
+  </portType>
+  <binding name="MagentoFunctions_Binding" type="tns:MagentoFunctions_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="GetCustomerIdByEcomID">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MagentoFunctions:GetCustomerIdByEcomID" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetCustomerIdByEcomID">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetCustomerIdByEcomID_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CheckIfItemExists">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MagentoFunctions:CheckIfItemExists" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CheckIfItemExists">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CheckIfItemExists_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="DownloadOrders">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MagentoFunctions:DownloadOrders" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="DownloadOrders">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="DownloadOrders_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="UploadCustomers">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MagentoFunctions:UploadCustomers" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="UploadCustomers">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="UploadCustomers_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="UploadItems">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MagentoFunctions:UploadItems" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="UploadItems">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="UploadItems_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ResyncProdIDs">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MagentoFunctions:ResyncProdIDs" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ResyncProdIDs">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ResyncProdIDs_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetSessionID">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MagentoFunctions:GetSessionID" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetSessionID">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetSessionID_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="SetAssemblyComponent">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MagentoFunctions:SetAssemblyComponent" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="SetAssemblyComponent">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="SetAssemblyComponent_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetAssemblyOrderNo">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MagentoFunctions:GetAssemblyOrderNo" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetAssemblyOrderNo">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetAssemblyOrderNo_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="UploadInventoryLevels">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MagentoFunctions:UploadInventoryLevels" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="UploadInventoryLevels">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="UploadInventoryLevels_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="DeleteBlankLines">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MagentoFunctions:DeleteBlankLines" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="DeleteBlankLines">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="DeleteBlankLines_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="MagentoFunctions">
+    <port name="MagentoFunctions_Port" binding="tns:MagentoFunctions_Binding">
+      <address location="http://nav-server.1sttech.local:9147/NAV16_DEV/WS/1st%20Tech%20-%20Pilot/Codeunit/MagentoFunctions" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

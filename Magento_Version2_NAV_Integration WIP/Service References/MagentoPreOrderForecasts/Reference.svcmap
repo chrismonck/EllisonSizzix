@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="62b71e2f-e12d-4ce0-b803-8ca0c6e45d45" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="C:\Azzure\Magento\MAGENTO_Ellison Europe NEW\AzzureMagentoNAVConnector v2-02f\AzzureMagentoNAVConnector v2\Magento_Version2_NAV_Integration WIP\sizzix-b2b.c3preview wsdls\sizzixB2bPreOrdersPreOrderCandidateService.wsdl" Protocol="file" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MagentoWSDL.wsdl" MetadataType="Wsdl" ID="a6581b21-4d06-4802-8347-a83ee9628bbf" SourceId="1" SourceUrl="file:///C:/Azzure/Magento/MAGENTO_Ellison Europe NEW/AzzureMagentoNAVConnector v2-02f/AzzureMagentoNAVConnector v2/Magento_Version2_NAV_Integration WIP/sizzix-b2b.c3preview wsdls/sizzixB2bPreOrdersPreOrderCandidateService.wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8a92c05a-d252-40f6-a124-6769b8085f12" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="C:\Azzure\Magento\MAGENTO_Ellison Europe NEW\AzzureMagentoNAVConnector v2-02f\AzzureMagentoNAVConnector v2\Magento_Version2_NAV_Integration WIP\sizzix-b2b.c3preview wsdls\AccountMessagesMessageServiceB2B_All.wsdl" Protocol="file" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MagentoWSDL1.wsdl" MetadataType="Wsdl" ID="00081837-eae9-4845-9db0-31a679012ef2" SourceId="1" SourceUrl="file:///C:/Azzure/Magento/MAGENTO_Ellison Europe NEW/AzzureMagentoNAVConnector v2-02f/AzzureMagentoNAVConnector v2/Magento_Version2_NAV_Integration WIP/sizzix-b2b.c3preview wsdls/AccountMessagesMessageServiceB2B_All.wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

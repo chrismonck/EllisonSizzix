@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Magento_NAV_Integration.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Magento_NAV_Integration_SalesOrder_service_SalesOrder_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:9047/EllisonDev/WS/Ellison%20Europe%20Ltd./Page/SalesOrder</Value>
+    </Setting>
+    <Setting Name="Magento_NAV_Integration_Customer_service_CustomerCard_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:9047/EllisonDev/WS/Ellison%20Europe%20Ltd./Page/Customer</Value>
+    </Setting>
+    <Setting Name="Magento_NAV_Integration_Item_Service_ItemCard_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:9047/EllisonDev/WS/Ellison%20Europe%20Ltd./Page/Item</Value>
+    </Setting>
+    <Setting Name="Magento_NAV_Integration_NavMagFunctions_MagentoFunctions" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:9047/EllisonDev/WS/Ellison%20Europe%20Ltd./Codeunit/MagentoFunctions</Value>
+    </Setting>
+    <Setting Name="Magento_NAV_Integration_ITemVariant_ItemVariants_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:9047/EllisonDev/WS/Ellison%20Europe%20Ltd./Page/ItemVariants</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Magento_Version2_NAV_Integration.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Magento_Version2_NAV_Integration_Customer_service_Customer_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:9047/EllisonDev/WS/Ellison%20Europe%20Ltd./Page/Customer</Value>
+    </Setting>
+    <Setting Name="Magento_Version2_NAV_Integration_Item_Service_Item_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:9047/EllisonDev/WS/Ellison%20Europe%20Ltd./Page/Item</Value>
+    </Setting>
+    <Setting Name="Magento_Version2_NAV_Integration_ItemVariant_ItemVariants_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:9047/EllisonDev/WS/Ellison%20Europe%20Ltd./Page/ItemVariants</Value>
+    </Setting>
+    <Setting Name="Magento_Version2_NAV_Integration_NavMagFunctions_MagentoFunctions" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.10.12:7047/DynamicsNAV80/WS/Ellison%20Europe%20Ltd./Codeunit/MagentoFunctions</Value>
+    </Setting>
+    <Setting Name="Magento_Version2_NAV_Integration_SalesOrder_service_SalesOrder_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:9047/EllisonDev/WS/Ellison%20Europe%20Ltd./Page/SalesOrder</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

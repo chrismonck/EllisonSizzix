@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MagentoTest.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MagentoTest_NavMagFunctions_MagentoFunctions" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://nav-server.1sttech.local:9147/NAV16_DEV/WS/1st%20Tech%20-%20Pilot/Codeunit/MagentoFunctions</Value>
+    </Setting>
+    <Setting Name="MagentoTest_Customer_service_Customer_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://nav-server.1sttech.local:9147/NAV16_DEV/WS/1st%20Tech%20-%20Pilot/Page/Customer</Value>
+    </Setting>
+    <Setting Name="MagentoTest_Item_Service_Item_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://nav-server.1sttech.local:9147/NAV16_DEV/WS/1st%20Tech%20-%20Pilot/Page/Item</Value>
+    </Setting>
+    <Setting Name="MagentoTest_SalesOrder_service_Sales_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://nav-server.1sttech.local:9147/NAV16_DEV/WS/1st%20Tech%20-%20Pilot/Page/SalesOrder</Value>
+    </Setting>
+    <Setting Name="MagentoTest_ItemVariant_ItemVariants_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://nav-server.1sttech.local:9147/NAV16_DEV/WS/1st%20Tech%20-%20Pilot/Page/ItemVariants</Value>
+    </Setting>
+    <Setting Name="MagentoTest_attachments_MagentoInteractionAttachments_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:9147/EllisonDev/WS/Ellison%20Europe%20Ltd./Page/MagentoInteractionAttachments</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
