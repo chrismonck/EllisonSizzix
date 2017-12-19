@@ -2553,8 +2553,7 @@ namespace Magento_Version2_NAV_Integration_Sizzix
 
                         MagentoProductSR.CatalogProductRepositoryV1SaveResponse respItem = client.catalogProductRepositoryV1Save(SaveProductRecord);
                         MagentoProductSR.CatalogDataProductInterface returnedItem = respItem.result;
-                        intEcommerceID = returnedItem.id.ToString();
-                        //.catalogProductUpdate(strSessionID, ProductID, ProductRecord, "", "");
+                        intEcommerceID = returnedItem.id.ToString();                        
                         RecordsUpdated = RecordsUpdated + 1;
                     }
                     catch (Exception e)
