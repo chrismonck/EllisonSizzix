@@ -553,7 +553,7 @@ namespace MagentoTest
                    "https://sizzix-b2b.c3preview.co.uk/soap/all?",
                 "Azzure",
                 "2dmwyw8MghwFeN",
-                "CMUUU123",
+                "CMRRR123",
                 "NEW ITEM TEST",
                 100,
                 120,
@@ -576,9 +576,9 @@ namespace MagentoTest
                 1,
                 "",
                 System.DateTime.Now,
-                "",
+                "accessory",
                 "Brenda Pinnick",
-                (float)150.50,
+                (float)160.50,
                 1,
                 ref intEcommerceID,
                 ref strError
@@ -619,8 +619,8 @@ namespace MagentoTest
                 "https://sizzix-b2b.c3preview.co.uk/soap/all?", //web service
                 "Azzure", //username
                 "2dmwyw8MghwFeN", //password               
-             "JAMIE TEST PRODUCT 2", //VVV123", //sku
-                "26329", //product id
+                "CMSSS123", //VVV123", //sku
+                "26335", //product id
                 "update Description", //name
                 0, //weight
                 0,//gross weight
@@ -640,7 +640,7 @@ namespace MagentoTest
                 System.DateTime.Now, //release date
                 "die", //product type                
                 "SIZZIX",//brand,
-                (float)150.50, //price
+                (float)160.50, //price
                 1, // 
                 ref strError);
 

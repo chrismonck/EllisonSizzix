@@ -2086,11 +2086,11 @@ namespace Magento_Version2_NAV_Integration_Sizzix
                         //All this below is defaulted based on trial and error with the API - neeed to discuss with Jamie C3
                         SaveProductRecord.product.attributeSetId = 9; //product = 9 and default = 4 // ProductRecord.attributeSetId;
                         SaveProductRecord.product.attributeSetIdSpecified = true;
-                        SaveProductRecord.product.visibility = ProductRecord.visibility;
+                        SaveProductRecord.product.visibility = 4;
                         SaveProductRecord.product.visibilitySpecified = true;
                         SaveProductRecord.product.price = ftPrice;// ProductRecord.price; /// this has been left in during testing but needs revisitng
                         SaveProductRecord.product.priceSpecified = true;                        
-                        SaveProductRecord.product.typeId = ProductRecord.typeId;
+                        SaveProductRecord.product.typeId = "simple";
                         SaveProductRecord.product.weightSpecified = true;
                         SaveProductRecord.product.weight = float.Parse(decGrossWeight.ToString());
                         SaveProductRecord.product.sku = ItemNo;
